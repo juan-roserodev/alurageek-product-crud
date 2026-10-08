@@ -1,114 +1,80 @@
-# Alura Geek - Aplicación de Gestión de Productos
+# AluraGeek · Catálogo de productos con CRUD
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+Aplicación web para **listar, agregar y eliminar productos** de una tienda geek, que consume una API REST simulada con **JSON Server**. Es mi solución al challenge **AluraGeek** del programa **Oracle Next Education (ONE) + Alura**.
 
-## **Descripción del Proyecto**
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![JSON Server](https://img.shields.io/badge/JSON_Server-323330?style=flat&logo=json&logoColor=white)
+[![GitHub Pages](https://img.shields.io/github/deployments/juan-roserodev/alurageek-product-crud/github-pages?label=GitHub%20Pages&logo=githubpages)](https://juan-roserodev.github.io/alurageek-product-crud/)
+[![Licencia MIT](https://img.shields.io/badge/licencia-MIT-green?style=flat)](LICENSE)
 
-Alura Geek es una aplicación diseñada para gestionar productos de una tienda en línea. Está construida utilizando tecnologías modernas como Node.js, HTML, CSS y JavaScript. Además, utiliza [JSON-Server](https://github.com/typicode/json-server) como API para manejar las operaciones de lectura, escritura y eliminación de productos desde un archivo `db.json`.
+### 🔗 [Ver demo en vivo](https://juan-roserodev.github.io/alurageek-product-crud/)
 
-## **Características**
-
-- 📦 **Listar productos:** Muestra todos los productos almacenados en el archivo `db.json`.
-- ➕ **Agregar productos:** Permite agregar nuevos productos con un título, imagen y precio.
-- ❌ **Eliminar productos:** Posibilidad de eliminar un producto de la lista mediante un botón dinámico.
-
-## **Requisitos Previos**
-
-Antes de ejecutar la aplicación, asegúrate de tener instalados los siguientes requisitos:
-
-- [Node.js](https://nodejs.org/) (versión 16.18.0 o superior).
-- [npm](https://www.npmjs.com/) (viene con Node.js).
-
-## **Instrucciones de Configuración**
-
-1. Clona este repositorio:
-
-   ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   ```
-
-2. Navega al directorio del proyecto:
-
-   ```bash
-   cd ALURAGEEK-DAVID-REYES-DEVELOP
-   ```
-
-3. Instala JSON-Server globalmente:
-
-   ```bash
-   npm install -g json-server
-   ```
-
-4. Inicia el servidor JSON-Server:
-
-   ```bash
-   json-server --watch db.json --port 3001
-   ```
-
-   Esto iniciará el servidor en la siguiente ruta:
-
-   ```
-   http://localhost:3001/productos
-   ```
-
-## **Estructura del Proyecto**
-
-```
-├── index.html              # Página principal de la aplicación
-├── css
-│   └── styles.css         # Estilos principales
-├── img                    # Carpeta con imágenes del proyecto
-├── js
-│   ├── conexion_API.js    # Conexión con la API JSON-Server
-│   ├── mostrarProductos.js # Lógica para mostrar los productos
-│   └── eliminarProductos.js # Lógica para eliminar productos
-├── pages                  # Páginas adicionales del proyecto
-├── db.json                # Base de datos local simulada
-├── LICENSE                # Licencia del proyecto
-├── package.json           # Configuración de dependencias
-├── package-lock.json      # Información detallada de dependencias
-└── README.md              # Documentación del proyecto
-```
-
-## **Uso de la Aplicación**
-
-### **1. Listar Productos**
-
-Los productos se mostrarán automáticamente al cargar la página principal. La información proviene de la API `http://localhost:3001/productos`.
-
-### **2. Agregar Productos**
-
-Puedes agregar un nuevo producto desde el formulario disponible. Al agregar un producto, se envía una solicitud `POST` a la API y se actualiza automáticamente la lista de productos.
-
-### **3. Eliminar Productos**
-
-Cada producto tiene un botón de eliminación con el ícono de una papelera. Al hacer clic en este botón:
-
-1. Se enviará una solicitud `DELETE` a la API para eliminar el producto.
-2. El producto desaparecerá de la lista automáticamente.
-
-## **Tecnologías Utilizadas**
-
-- ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-- ![JSON-Server](https://img.shields.io/badge/JSON--Server-323330?style=for-the-badge&logo=json&logoColor=white)
-- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-## **Próximas Mejoras**
-
-- ✅ Validación avanzada de formularios al agregar productos.
-- 🌐 Soporte para múltiples idiomas.
-- 📊 Paginación y filtrado de productos.
-
-## **Contribuciones**
-
-¡Las contribuciones son bienvenidas! Si deseas contribuir, abre un *pull request* o crea un *issue*.
+> La demo en GitHub Pages funciona en **modo solo lectura**: como no hay API disponible, el catálogo se carga desde `db.json`. Para agregar y eliminar productos, ejecuta la API en local (ver instalación).
 
 ---
 
-**¡Gracias por usar Alura Geek! Esperamos que disfrutes del proyecto!** 🎉
+## 🎯 Descripción
 
+El objetivo del reto era practicar el consumo de una API REST con `fetch` y `async/await`: leer los productos, crear nuevos con un formulario y eliminarlos, actualizando la interfaz sin recargar la página.
+
+## ✨ Características
+
+- 📦 **Listar productos** desde la API y mostrarlos en tarjetas.
+- ➕ **Agregar productos** con nombre e imagen desde un formulario (`POST`).
+- ❌ **Eliminar productos** con confirmación (`DELETE`).
+- 🧪 **Modo demo:** si la API no está disponible, se muestran los productos de ejemplo de `db.json`.
+- Diseño responsive con Flexbox.
+
+## 🛠️ Stack tecnológico
+
+- **HTML5** y **CSS3** (Flexbox, reset, diseño responsive)
+- **JavaScript (ES6+)** con módulos, `fetch` y `async/await`
+- **JSON Server** como API REST simulada
+- **Node.js / npm** para ejecutar la API
+
+## 🗂️ Estructura
+
+```
+alurageek-product-crud/
+├── index.html                 # Catálogo de productos
+├── pages/
+│   ├── enviar-producto.html   # Formulario para agregar productos
+│   └── envio-concluido.html   # Confirmación de envío
+├── Js/
+│   ├── conexion_API.js        # Capa de acceso a la API (GET, POST, DELETE) y modo demo
+│   ├── mostrarProductos.js    # Renderizado de las tarjetas
+│   ├── crearProducto.js       # Envío del formulario
+│   └── eliminarProducto.js    # Eliminación con delegación de eventos
+├── css/  img/
+└── db.json                    # Datos de la API simulada
+```
+
+## 🚀 Instalación y uso local
+
+Requisitos: [Node.js](https://nodejs.org/) 16 o superior.
+
+```bash
+git clone https://github.com/juan-roserodev/alurageek-product-crud.git
+cd alurageek-product-crud
+npm install
+npm run api        # Inicia JSON Server en http://localhost:3001/productos
+```
+
+Luego abre `index.html` con un servidor local (por ejemplo, *Live Server* en VS Code).
+
+## ✅ Buenas prácticas aplicadas
+
+- **Capa de API separada** (`conexion_API.js`): la interfaz no conoce los detalles de las peticiones HTTP.
+- **Prevención de XSS:** las tarjetas se construyen con `createElement` y `textContent`, no con `innerHTML`, así el texto ingresado por el usuario no puede inyectar HTML ni scripts.
+- **Delegación de eventos:** un solo listener atiende los botones de eliminar, incluidos los de tarjetas creadas después.
+- **Manejo de errores** con `try/catch` y mensajes claros para el usuario.
+
+## 👤 Autor
+
+**Juan David Rosero Reyes** · Desarrollador web junior
+
+[![Portafolio](https://img.shields.io/badge/Portafolio-juan--roserodev.github.io-0A66C2?style=flat&logo=githubpages&logoColor=white)](https://juan-roserodev.github.io/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-david--reyes--dev-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/david-reyes-dev)
+[![Email](https://img.shields.io/badge/Email-juan.rosero21%40hotmail.com-0078D4?style=flat&logo=microsoftoutlook&logoColor=white)](mailto:juan.rosero21@hotmail.com)
