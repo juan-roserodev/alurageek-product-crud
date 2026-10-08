@@ -11,6 +11,8 @@ Aplicación web para **listar, agregar y eliminar productos** de una tienda geek
 
 ### 🔗 [Ver demo en vivo](https://juan-roserodev.github.io/alurageek-product-crud/)
 
+![Catálogo de productos de AluraGeek](docs/captura.png)
+
 > La demo en GitHub Pages funciona en **modo solo lectura**: como no hay API disponible, el catálogo se carga desde `db.json`. Para agregar y eliminar productos, ejecuta la API en local (ver instalación).
 
 ---
