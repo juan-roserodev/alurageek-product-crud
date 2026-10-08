@@ -13,7 +13,8 @@ async function crearProducto(evento) {
         await conexion_API.enviarProducto(titulo, imagem, precio);
         window.location.href = "../pages/envio-concluido.html";
     } catch (error) {
-        alert(error);
+        console.error(error);
+        alert('No se pudo guardar el producto. Para agregar productos ejecuta la API local (npm run api).');
     }
 }
 
