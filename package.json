@@ -123,12 +123,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Juanda845/AluraGeek-David-Reyes-Develop.git"
+    "url": "git+https://github.com/juan-roserodev/AluraGeek-David-Reyes-Develop.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Juanda845/AluraGeek-David-Reyes-Develop/issues"
+    "url": "https://github.com/juan-roserodev/AluraGeek-David-Reyes-Develop/issues"
   },
-  "homepage": "https://github.com/Juanda845/AluraGeek-David-Reyes-Develop#readme"
+  "homepage": "https://github.com/juan-roserodev/AluraGeek-David-Reyes-Develop#readme"
 }
